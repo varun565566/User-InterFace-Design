@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registrationFragment">
+
+    <!-- Registration Fragment -->
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.example.registrationapp.RegistrationFragment"
+        android:label="Registration"
+        tools:layout="@layout/fragment_registration" >
+
+        <action
+            android:id="@+id/action_registration_to_confirmation"
+            app:destination="@id/confirmationFragment" />
+    </fragment>
+
+    <!-- Confirmation Fragment -->
+    <fragment
+        android:id="@+id/confirmationFragment"
+        android:name="com.example.registrationapp.ConfirmationFragment"
+        android:label="Confirmation"
+        tools:layout="@layout/fragment_confirmation">
+
+        <argument
+            android:name="first"
+            app:argType="string" />
+
+        <argument
+            android:name="second"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
